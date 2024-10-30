@@ -1,0 +1,87 @@
+/* General Card Styling */
+.profile-card, .game-card {
+  background-color: #2b2b2b;
+  color: #ffffff;
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 500px;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Profile Image Section */
+.profile-image-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.profile-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #00aaff;
+}
+
+/* Social Icons Styling */
+.social-icons {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.social-icons ion-icon {
+  font-size: 24px;
+  color: #007bff;
+}
+
+/* Level Section */
+.level-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #00aaff; /* Gold color for title */
+}
+
+.level {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  background: linear-gradient(135deg, #ff0000, #ff4d4d, #ff9999);
+  border-radius: 15px;
+  padding: 8px 20px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(255, 138, 0, 0.6), 0 0 20px rgba(255, 138, 0, 0.4);
+}
+
+/* Adding Glowing Border to Level */
+.level:before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 15px;
+  background: linear-gradient(135deg, rgba(255, 220, 0, 0.4), rgba(255, 138, 0, 0.4));
+  z-index: -1;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 10px rgba(255, 138, 0, 0.6), 0 0 20px rgba(255, 138, 0, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 15px rgba(255, 220, 0, 0.8), 0 0 30px rgba(255, 138, 0, 0.6);
+  }
+}
